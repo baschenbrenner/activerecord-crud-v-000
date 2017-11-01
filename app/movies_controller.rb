@@ -55,7 +55,8 @@ def can_find_by_multiple_attributes
 end
 
 def can_find_using_where_clause_and_be_sorted
-
+  new_array=Movie.all.select {|movie| movie.release_date > 2002}
+  new_array.sort {|a.release_date,b.release_date| b<=>a}
   ActiveRecord::Base.connection.execute("SELECT * FROM movies WHERE release_date > 2002 ORDER BY release_date DESC;")
   binding.pry
 end
