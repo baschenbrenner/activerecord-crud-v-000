@@ -35,7 +35,7 @@ end
 
 def can_get_the_last_item_in_the_database
   binding.pry
-  Movie.all.last
+  Movie.all.last.name
 end
 
 def can_get_size_of_the_database
