@@ -83,7 +83,7 @@ def can_update_multiple_items_at_once
   5.times do |i|
     Movie.create(title: "Movie_#{i}", release_date: 2000+i)
   end
-  movies = {0 => {:title=>"A Movie"}, 1 => {:title=>"A Movie"}, 2 => {:title=>"A Movie"}, 3 => {:title=>"A Movie"}, 4 => {:title=>"A Movie"}}
+  movies = {1 => {:title=>"A Movie"}, 2 => {:title=>"A Movie"}, 3 => {:title=>"A Movie"}, 4 => {:title=>"A Movie"}, 5 => {:title=>"A Movie"}}
   Movie.update(movies.keys, movies.values)
 end
 
