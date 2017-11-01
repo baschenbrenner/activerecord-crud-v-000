@@ -30,11 +30,11 @@ def can_be_created_in_a_block
 end
 
 def can_get_the_first_item_in_the_database
-  binding.pry
+  Movie.all.first
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  Movie.all.last
 end
 
 def can_get_size_of_the_database
