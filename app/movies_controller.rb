@@ -56,9 +56,8 @@ end
 
 def can_find_using_where_clause_and_be_sorted
   
-  # For this test return all movies released after 2002 and ordered by
-  # release date descending
   ActiveRecord::Base.connection.execute("SELECT * FROM movies WHERE release_date > 2002 ORDER BY release_date DESC;")
+  binding.pry
 end
 
 def can_be_found_updated_and_saved
